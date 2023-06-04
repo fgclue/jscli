@@ -11,6 +11,3 @@
 1. Install rust and cargo
 2. Clone the git repo: `git clone https://github.com/fgclue/jscli && cd jscli`
 3. Compile it: `make`
-# Git Repository
-Edit this README
-Exit using :wq.
