@@ -1,0 +1,20 @@
+# Maintainer: clue <lost@biitle.nl>
+
+pkgname=jscli
+pkgver=1
+pkgdesc="A CLI tool for creating JS/TS projects using frameworks like React, Svelte, etc."
+arch=('x86_64')
+license=('GPL3')
+depends=(
+	'rust'
+	'cargo'
+)
+source=("$pkgname-$pkgver.rs"::"https://raw.githubusercontent.com/fgclue/jscli/master/js.rs")
+
+build() {
+	rustc js.rs -o js
+}
+
+package() {
+	cp ./js /usr/bin/js
+}
